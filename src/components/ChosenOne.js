@@ -1,13 +1,15 @@
 import React from 'react'
 
-export const ChosenOne = ({ videos, currentVideoId/*, dispatch */}) => {
-  /*const selectedVideo = videos.find(video => 
-  	video.id.videoId === currentVideoId
-  )*/
+export const ChosenOne = ({ videos, currentVideoId }) => {
 
   const selectedVideo = currentVideoId
-  const url = `https://www.youtube.com/embed/${selectedVideo}` 
-  return <iframe src={url} title='selectedVideoFrame'></iframe>
+  const url = `https://www.youtube.com/embed/${selectedVideo}`
+  
+  if(currentVideoId) { 
+    return <iframe className='selectedVideo' src={url} title='selectedVideoFrame'></iframe>
+  } 
+  
+  return <div></div>
 }
 
 

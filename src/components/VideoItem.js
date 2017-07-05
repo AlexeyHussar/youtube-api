@@ -1,9 +1,9 @@
 import React from 'react'
 
 export const VideoItem = ({ video, onClick }) => {
-	const imageURL = video.snippet.thumbnails.default.url
+	const imageURL = video.snippet.thumbnails.medium.url
 	return(
-		<li onClick={onClick}>
+		<li className='listItem' onClick={onClick}>
 			<div>
 				<img src={imageURL} alt='Video_Shortcut' />
 				<div>{video.snippet.title}</div>

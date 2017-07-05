@@ -13,7 +13,7 @@ export const Search = ({ term, onYTDispatch, onInputDispatch }) => {
 				ref={ node => input = node }
 				onChange={() => onInputDispatch(input.value)}
 			/>
-			<button type='submit'>Search</button>
+			<button className='searchButton' type='submit'>Search</button>
 		</form>	
 	)
 }	
